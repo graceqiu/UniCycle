@@ -1,0 +1,225 @@
+/* Main */
+
+:root {
+    --background: rgb(108, 197, 157);
+    --accentPrimary: rgb(255, 255, 255);
+    --accentSecondary: #181717;
+    --textColor: #181717;
+    --fontPrimary: 'Roboto', sans-serif;
+    --fontSecondary: 'Montserrat', sans-serif;
+}
+
+* {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-color: var(--background);
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: 0% 5%;
+}
+
+header, footer {
+    padding-right: 3%;
+    padding-left: 3%;
+    width: 94%;
+}
+
+/* Special Effects */
+
+.underlineHover {
+    display: inline-block;
+    padding-bottom: 0.5em;
+    background-image: linear-gradient(var(--accentPrimary), var(--accentPrimary));
+    background-position: 0 100%; 
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition:
+      background-size 0.3s,
+      background-position 0s 0.3s;
+}
+  
+.underlineHover:hover {
+background-position: 100% 100%;
+background-size: 100% 2px;
+}
+
+/* Text  */
+
+h1 {
+    font-family: var(--fontSecondary);
+    color: var(--accentPrimary);
+    font-size: 55px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+h2 {
+    font-family: var(--fontSecondary);
+    color: var(--accentSecondary);
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+a {
+    font-family: var(--fontSecondary);
+    color: var(--textColor);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+a:hover {
+    color: var(--accentPrimary);
+    text-decoration: none;
+}
+
+.altTextPrimary {
+    color: var(--accentPrimary);   
+}
+
+.altTextSecondary {
+    color: var(--accentSecondary);
+}
+
+/* Primary Nav */
+
+header {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: 10vh;
+    background-color: var(--background);
+    position: fixed;
+    z-index: 1;
+}
+
+header #primaryNav {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+    transform: translate(1.5%, 0%);
+}
+
+header #primaryNav li a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--accentPrimary)
+}
+
+/* Full Page Sections */
+
+.fullPageSection {
+    height: 100vh;
+    position: relative;
+}
+
+.fullPageSection .absoluteCenteredContent {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Arrow Links */
+
+.arrowLinkDiv {
+    position: absolute;
+    width: 100%;
+    top: 80%;
+}
+
+.arrowLink {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    text-decoration: none;
+}
+
+.arrowLink .arrowLinkText {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accentPrimary);
+    display: none;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.arrowLink .material-icons.md-48 { 
+    font-size: 48px; 
+    color: var(--accentPrimary);
+    transition: 0.3s;
+}
+
+.arrowLink .material-icons.md-48:hover {
+    font-size: 36px; 
+}
+
+.arrowLink .material-icons.md-48:hover + .arrowLinkText {
+    display: block;
+}
+
+/* 1. Home */
+
+#home {
+    text-align: center;
+}
+
+/* 2. About */
+
+#about {
+    text-align: left;
+}
+
+/* 3. What */
+
+#what {
+    text-align: right;
+}
+
+/* 4. Contact  */
+
+footer {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h1 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#footerItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
