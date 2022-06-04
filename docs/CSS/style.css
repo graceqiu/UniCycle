@@ -40,32 +40,32 @@ body {
     height: auto;
 }
 
-#circle1 {
+#img1 {
     top: -30%;
     right: -15%;
 }
 
-#circle2 {
+#img2 {
+    bottom: 10%;
+    left: -15%;
+}
+
+#img3 {
+    bottom: -40%;
+    right: -25%;
+}
+
+#img4 {
     bottom: -50%;
     left: -15%;
 }
 
-#circle3 {
+#img5 {
     bottom: -50%;
     right: -15%;
 }
 
-#circle4 {
-    bottom: -50%;
-    left: -15%;
-}
-
-#circle5 {
-    bottom: -50%;
-    right: -15%;
-}
-
-#bike {
+#img6 {
     bottom: 10%;
     left: -15%;
 }
