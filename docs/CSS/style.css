@@ -205,16 +205,16 @@ a {
     text-align: left;
 }
 
-/* 3. How */
+/* 3. What */
 
-#how {
+#what {
     text-align: right;
 }
 
 /* 4. Why */
 
 #why {
-    text-align: left;
+    text-align: center;
 }
 
 /* 5. Try  */
