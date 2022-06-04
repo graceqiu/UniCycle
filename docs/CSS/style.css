@@ -1,23 +1,16 @@
 /* Main */
 
 :root {
-    --background: rgb(108, 197, 157);
-    --accentPrimary: rgb(255, 255, 255);
-    --accentSecondary: #181717;
-    --textColor: #181717;
+    --background: #07134F;
+    --accentPrimary: #3ED6CD;
+    --accentSecondary: #F9B345;
+    --textColor: #ffffff;
     --fontPrimary: 'Roboto', sans-serif;
     --fontSecondary: 'Montserrat', sans-serif;
 }
 
 * {
     scroll-behavior: smooth !important;
-}
-
-body {
-    background-color: var(--background);
-    display: none;
-    margin: 0;
-    padding: 0;
 }
 
 #container {
@@ -28,6 +21,53 @@ header, footer {
     padding-right: 3%;
     padding-left: 3%;
     width: 94%;
+}
+
+/* Background */
+
+body {
+    background-color: var(--background);
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.backgroundImg {
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    height: auto;
+}
+
+#circle1 {
+    top: -30%;
+    right: -15%;
+}
+
+#circle2 {
+    bottom: -50%;
+    left: -15%;
+}
+
+#circle3 {
+    bottom: -50%;
+    right: -15%;
+}
+
+#circle4 {
+    bottom: -50%;
+    left: -15%;
+}
+
+#circle5 {
+    bottom: -50%;
+    right: -15%;
+}
+
+#bike {
+    bottom: 10%;
+    left: -15%;
 }
 
 /* Special Effects */
@@ -53,16 +93,15 @@ background-size: 100% 2px;
 
 h1 {
     font-family: var(--fontSecondary);
-    color: var(--accentPrimary);
+    color: var(--accentSecondary);
     font-size: 55px;
     font-weight: 600;
-    text-transform: capitalize;
     margin: 0;
 }
 
 h2 {
     font-family: var(--fontSecondary);
-    color: var(--accentSecondary);
+    color: var(--textColor);
     font-size: 32px;
     font-weight: 400;
     letter-spacing: -0.05em;
@@ -70,42 +109,17 @@ h2 {
     margin: 0;
 }
 
-a {
-    font-family: var(--fontSecondary);
-    color: var(--textColor);
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: underline;
-    cursor: pointer;
-    text-transform: lowercase;
-    margin: 0;
-}
-
-a:hover {
-    color: var(--accentPrimary);
-    text-decoration: none;
-}
-
-.altTextPrimary {
-    color: var(--accentPrimary);   
-}
-
-.altTextSecondary {
-    color: var(--accentSecondary);
-}
-
 /* Primary Nav */
 
-header {
+#navBar {
     padding-top: 2%;
     padding-bottom: 2%;
-    height: 10vh;
-    background-color: var(--background);
     position: fixed;
     z-index: 1;
+    transition: .3s;
 }
 
-header #primaryNav {
+#navBar #primaryNav {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -116,12 +130,13 @@ header #primaryNav {
     transform: translate(1.5%, 0%);
 }
 
-header #primaryNav li a {
+a {
+    font-family: var(--fontSecondary);
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--accentPrimary)
+    color: var(--accentPrimary);
 }
 
 /* Full Page Sections */
@@ -184,42 +199,39 @@ header #primaryNav li a {
     text-align: center;
 }
 
-/* 2. About */
+/* 2. Who */
 
-#about {
+#who {
     text-align: left;
 }
 
-/* 3. What */
+/* 3. How */
 
-#what {
+#how {
     text-align: right;
 }
 
-/* 4. Contact  */
+/* 4. Why */
 
-footer {
-    padding-top: 4%;
-    padding-bottom: 4%;
+#why {
+    text-align: left;
+}
+
+/* 5. Try  */
+
+#try {
+    text-align: center;
+}
+
+#try .absoluteCenteredContent {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 4em;
 }
 
-footer h1 {
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: -0.08em;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-#footerItems {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    list-style-type: none;
-    text-align: center;
-    padding: 0;
+#try .absoluteCenteredContent img {
+    width: 20%;
+    height: auto;
 }
