@@ -70,7 +70,7 @@ body {
     left: -15%;
 }
 
-/* Special Effects */
+/* Special Effects: 1. Text Hover */
 
 .underlineHover {
     display: inline-block;
@@ -83,13 +83,73 @@ body {
       background-size 0.3s,
       background-position 0s 0.3s;
 }
-  
+
 .underlineHover:hover {
 background-position: 100% 100%;
 background-size: 100% 2px;
 }
 
-/* Text  */
+/* Special Effects: 2. Title */
+
+.ml6 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.3em;
+}
+  
+.ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+  
+.ml6 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+/* Special Effects: 3. Arrow Page Links */
+
+.arrowLinkDiv {
+    position: absolute;
+    width: 100%;
+    top: 80%;
+}
+
+.arrowLink {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    text-decoration: none;
+}
+
+.arrowLink .arrowLinkText {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accentPrimary);
+    display: none;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.arrowLink .material-icons.md-48 { 
+    font-size: 48px; 
+    color: var(--accentPrimary);
+    transition: 0.3s;
+}
+
+.arrowLink .material-icons.md-48:hover {
+    font-size: 36px; 
+}
+
+.arrowLink .material-icons.md-48:hover + .arrowLinkText {
+    display: block;
+}
+
+/* Text */
 
 h1 {
     font-family: var(--fontSecondary);
@@ -155,44 +215,6 @@ a {
     align-items: center;
 }
 
-/* Arrow Links */
-
-.arrowLinkDiv {
-    position: absolute;
-    width: 100%;
-    top: 80%;
-}
-
-.arrowLink {
-    display: flex;
-    flex-direction: column-reverse;
-    text-align: center;
-    text-decoration: none;
-}
-
-.arrowLink .arrowLinkText {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--accentPrimary);
-    display: none;
-    transition: 0.3s;
-    text-transform: uppercase;
-}
-
-.arrowLink .material-icons.md-48 { 
-    font-size: 48px; 
-    color: var(--accentPrimary);
-    transition: 0.3s;
-}
-
-.arrowLink .material-icons.md-48:hover {
-    font-size: 36px; 
-}
-
-.arrowLink .material-icons.md-48:hover + .arrowLinkText {
-    display: block;
-}
-
 /* 1. Home */
 
 #home {
@@ -203,6 +225,15 @@ a {
 
 #who {
     text-align: left;
+}
+
+#who #logos {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;    
 }
 
 /* 3. What */
