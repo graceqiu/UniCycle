@@ -5,8 +5,8 @@
     --accentPrimary: #3ED6CD;
     --accentSecondary: #F9B345;
     --textColor: #ffffff;
-    --fontPrimary: 'Roboto', sans-serif;
-    --fontSecondary: 'Montserrat', sans-serif;
+    --fontPrimary: 'Comfortaa', cursive;
+    --fontSecondary: 'Roboto', sans-serif;
 }
 
 * {
@@ -41,44 +41,24 @@ header, footer {
     height: auto;
 }
 
-#bgImg1 {
+.bgImgCircleRight {
     top: -20%;
     right: -20%;
 }
 
-#bgImg2 {
+.bgImgCircleLeft{
+    top: -20%;
+    left: -20%;
+}
+
+.bgImgDevice {
     bottom: 10%;
     left: -15%;
 }
 
-#bgImg3 {
+#bgImgCircleSpecial {
     top: 0%;
     right: -20%;
-}
-
-#bgImg4 {
-    top: -20%;
-    left: -20%;
-}
-
-#bgImg5 {
-    top: -20%;
-    right: -20%;
-}
-
-#bgImg6 {
-    top: -20%;
-    left: -20%;
-}
-
-#bgImg7 {
-    top: -20%;
-    right: -20%;
-}
-
-#bgImg8 {
-    bottom: 10%;
-    left: -15%;
 }
 
 /* Special Effects: 1. Text Hover */
@@ -126,8 +106,9 @@ header, footer {
 
 .arrowLinkDiv {
     position: absolute;
-    width: 100%;
+    left: 50%;
     top: 85%;
+    transform: translate(-50%, 0%);
 }
 
 .arrowLink {
@@ -138,9 +119,6 @@ header, footer {
 }
 
 .arrowLink .arrowLinkText {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--accentPrimary);
     display: none;
     transition: 0.3s;
     text-transform: uppercase;
@@ -163,21 +141,39 @@ header, footer {
 /* Text */
 
 h1 {
-    font-family: var(--fontSecondary);
+    font-family: var(--fontPrimary);
     color: var(--accentSecondary);
     font-size: 55px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
 }
 
 h2 {
-    font-family: var(--fontSecondary);
+    font-family: var(--fontPrimary);
     color: var(--textColor);
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: -0.05em;
     text-transform: lowercase;
     margin: 0;
+}
+
+p {
+    font-family: var(--fontPrimary);
+    color: var(--textColor);
+    font-size: 20px;
+    font-weight: 300;
+    margin: 2em 0 0 0;
+}
+
+a {
+    font-family: var(--fontSecondary);
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--accentPrimary);
+    letter-spacing: 0.1em;
 }
 
 /* Primary Nav */
@@ -206,15 +202,6 @@ h2 {
     justify-content: center;
     gap: 6em;
     transform: translate(1.5%, 0%);
-}
-
-a {
-    font-family: var(--fontSecondary);
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--accentPrimary);
 }
 
 /* Full Page Sections */

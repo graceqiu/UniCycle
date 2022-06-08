@@ -1,27 +1,29 @@
 $(document).ready(function() {
-    // make page load smooth
-    $("body").fadeIn(500);
-    window.onscroll = function() {onScroll()};
+  // make page load smooth
+  $("body").fadeIn(500);
+  window.onscroll = function() {onScroll()};
 
 
-    // Wrap every letter in a span
-    var textWrapper = document.querySelector('.ml6 .letters');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  // title animation
+  var textWrapper = document.querySelector('.ml6 .letters');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    anime.timeline({loop: true})
-      .add({
-        targets: '.ml6 .letter',
-        translateY: ["1.1em", 0],
-        translateZ: 0,
-        duration: 750,
-        delay: (el, i) => 50 * i
-      }).add({
-        targets: '.ml6',
-        opacity: 0,
-        duration: 1000,
-        easing: "easeOutExpo",
-        delay: 1000
-      });
+  anime.timeline({loop: false})
+    .add({
+      targets: '.ml6 .letter',
+      translateY: ["1.1em", 0],
+      translateZ: 0,
+      duration: 750,
+      delay: (el, i) => 100 * i
+    });
+  
+  // brand logo animations
+  $("#logos").children().each(function() {
+    $(this).mouseenter(function() {
+      $(this).effect("bounce", 1500);
+    })
+  })
+  
 });
 
 function onScroll() {
